@@ -19123,6 +19123,14 @@
 <span class="sd">        b: ivy.array([4, 3, 2])</span>
 <span class="sd">    }</span>
 
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([-1, 0, 1]),</span>
+<span class="sd">    ...                   b=ivy.array([2, 3, 4]))</span>
+<span class="sd">    &gt;&gt;&gt; y = ivy.Container.static_flip(x, axis=0)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([1, 0, -1]),</span>
+<span class="sd">        b: ivy.array([4, 3, 2])</span>
+<span class="sd">    }</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
@@ -19178,13 +19186,21 @@
 
 <span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([-1, 0, 1]),</span>
 <span class="sd">    ...                   b=ivy.array([2, 3, 4]))</span>
-<span class="sd">    &gt;&gt;&gt; y = ivy.flip(x)</span>
+<span class="sd">    &gt;&gt;&gt; y = x.flip()</span>
 <span class="sd">    &gt;&gt;&gt; print(y)</span>
 <span class="sd">    {</span>
 <span class="sd">        a: ivy.array([1, 0, -1]),</span>
 <span class="sd">        b: ivy.array([4, 3, 2])</span>
 <span class="sd">    }</span>
 
+<span class="sd">    &gt;&gt;&gt; x = ivy.Container(a=ivy.array([-1, 0, 1]),</span>
+<span class="sd">    ...                   b=ivy.array([2, 3, 4]))</span>
+<span class="sd">    &gt;&gt;&gt; y = x.flip(axis=0)</span>
+<span class="sd">    &gt;&gt;&gt; print(y)</span>
+<span class="sd">    {</span>
+<span class="sd">        a: ivy.array([1, 0, -1]),</span>
+<span class="sd">        b: ivy.array([4, 3, 2])</span>
+<span class="sd">    }</span>
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="k">pass</span></div>
 
